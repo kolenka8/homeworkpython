@@ -1,6 +1,6 @@
 def proverka(year,month,day):
-    if 0 <= year and 0 < month < 13 and 0 < day < 32: #Ограничения по датам(макс дней).
-        if year % 4 == 0: # Проверка на високосный год
+    if 0 < month < 13 and 0 < day < 32: #Ограничения по датам(макс дней, месяцев).
+        if year % 4 == 0 and year % 100 !=0 or year % 400 == 0: # Проверка на високосный год
             if month == 2: # В високосном году в феврале 29 дней.
                 if day < 30:
                     return True
